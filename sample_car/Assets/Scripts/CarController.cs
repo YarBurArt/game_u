@@ -18,8 +18,8 @@ public class CarController : MonoBehaviour
     [SerializeField] private float maxAngle;
     private void FixedUpdate()
     {
-        colliderFL.motorTorque = Input.GetAxis("Vertical") * force;
-        colliderFR.motorTorque = Input.GetAxis("Vertical") * force;
+        colliderFL.motorTorque = Input.GetAxis("Vertical") * force * -1;
+        colliderFR.motorTorque = Input.GetAxis("Vertical") * force * -1;
 
         if (Input.GetKey(KeyCode.Space))
         {
